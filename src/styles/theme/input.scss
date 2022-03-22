@@ -1,0 +1,14 @@
+.form {
+    &__input { 
+        width: 65%;
+        height: 100%;
+        display: flex;
+        position: absolute;
+        color: lightgrey;
+        font-size: 100%;
+        padding: 10px;
+        border-radius: 3px;
+    
+    }
+}
+

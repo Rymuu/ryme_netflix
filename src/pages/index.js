@@ -1,22 +1,31 @@
-import { useEffect, useState } from "react";
-import movieService from "../services/movie.service";
+import React, { useState } from "react";
+import Input from "../components/Input"
+import Button from "../components/Button";
 
-const Home = () => {
-  const [movie, setMovie] = useState();
-  
-    useEffect(() => {
-      movieService.getMovie(5)
-        .then((data) => {
-          setMovie(data);
-        })
-        .catch(err => console.log(err))
-        },[]);
-   
+const Login = () => {
+
   return (
-    <div className="page__home">
-      <h1>{movie && movie.poster_path}</h1> 
+    <div>
+    <div className="background_image"></div>
+    <div className="opacity"></div>
+    <div className="login__page">
+        <p className="p_h1">Films, séries TV et bien<br></br>plus en illimité.</p>
+        <p className="p_h2">Où que vous soyez. Annulez à tout moment.</p>
+      <form className="form">
+          <Input
+          label="Prêt à regarder Netflix ? Saisissez votre adresse e-mail pour vous abonner ou réactiver votre abonnement."
+          name="username"
+          id="username"
+          type="email"
+          classes="form__input"
+          required={true}
+          placeholder="Adresse e-mail"
+          />
+        <Button title="Commencer >" classes="btn btn__color-red" type="submit"/>
+      </form>
     </div>
-  )
+    </div>
+  );
 };
 
-export default Home;
+export default Login;

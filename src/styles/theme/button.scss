@@ -1,0 +1,26 @@
+.btn {
+    border: none;
+    padding: 15px 20px;
+    background-color: none;
+    transition: 0.3s all;
+    border: 1px solid black;
+    font-size: 200%;
+    &__color {
+        &-red {
+            background: #dd0e15;
+            color: white;
+            &:hover {
+                background: red;
+                transition: 0.3s all;
+            }
+            &__shape {
+                &-rounded {
+                    border-radius: 4px;
+                    background: #dd0e15;
+                    color:white;
+                }
+            }
+        }
+    }
+}
+

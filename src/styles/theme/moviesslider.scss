@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    padding: 0 45px;
+  }
+  
+.movie {
+    margin-top: 5px;
+    margin-right: 0px;
+    flex: 0 0 19.7%;
+    text-align: center;
+    transition: transform 300ms ease 100ms;
+    &:hover {
+        transform: scale(1.2) !important;
+      }
+    &__img {
+        width:100%;
+        height: auto;
+        border-radius: 3px;
+    }
+}
+
+  .container:hover .movie {
+    transform: translateX(-20%);
+ }
+
+ .movie:hover ~ .movie {
+    transform: translateX(25%);
+ }

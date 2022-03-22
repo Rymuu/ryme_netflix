@@ -1,13 +1,20 @@
 .header {
     &__main {
+        z-index: 99;
+        position: absolute;
+        margin-top: 20px;
+        height: 50px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 20px;
+        padding-right: 3.5%;
+        padding-left: 2.5%;
     }
     &__logo {
         img {
-            width: 200px;
+            margin-top: 10px;
+            height: 16%;
+            width: 16%;
         }
     }
     &__nav {
@@ -18,7 +25,16 @@
                 list-style: none;
             }
             &__item {
-                margin: 0px 20px;
+                Button {
+                width: fit-content;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 35px;
+                width: 115px;
+                margin-left: auto;
+                font-size: 105%;
+                }
             }
             &__link {
                 font-weight: bold;
