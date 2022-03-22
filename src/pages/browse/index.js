@@ -33,7 +33,7 @@ const Index = () => {
         const responsive = {
           desktop: {
             breakpoint: { max: 3000, min: 1024 },
-            items: 6,
+            items: 6.5,
             slidesToSlide: 6 // optional, default to 1.
           },
           tablet: {
