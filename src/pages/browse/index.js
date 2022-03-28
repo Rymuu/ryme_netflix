@@ -4,13 +4,15 @@ import movieService from "../../services/movie.service";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import CategoryTitle from "../../components/CategoryTitle";
+import Banner from "../../components/Banner";
+
 
 const Index = () => {
   const [video, setVideo] = useState();
   const [loading, setLoading] = useState(false)
   const [movies, setMovies] = useState();
   const ytbURL = "https://www.youtube.com/embed";
-  
+
     useEffect(() => {
       movieService.getMovies()
         .then((data) => {
@@ -52,6 +54,7 @@ const Index = () => {
   return (
     <>
     <div className="page__browse">
+      <Banner/>
       <iframe width="420" height="315"
         src={"https://www.youtube.com/embed/" + video + "?autoplay=1&mute=1&controls=0&&showinfo=0&loop=1"}>
       </iframe>
