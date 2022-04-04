@@ -1,11 +1,7 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import movieService from '../services/movie.service'
 import Modal from './Modal';
-
-
 
 function Banner() {
   
@@ -61,10 +57,10 @@ function Banner() {
           </p>
           <div className="banner__buttons">
             <button  className="banner__button ">
-                <PlayArrowIcon/> Lecture
+              Lecture
             </button>
             <button className="banner__button" onClick={handleClickInfoModal}>
-                <HelpOutlineIcon/> Plus d'infos
+              <AiFillInfoCircle/> Plus d'infos
             </button>
           </div>
 

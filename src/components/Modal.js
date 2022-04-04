@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
-import AddIcon from '@mui/icons-material/Add';
 
 const Index = (props) => {
     const {bannerStyle, movie, popUp, popUpStatut} = props
@@ -68,7 +66,7 @@ const Index = (props) => {
     <div className="quickView__banner" style={bannerStyle} >
     <center>
             <button className="banner__button" onClick={() => addTowatchlist(movie)}>
-                <AddIcon/> Watchlist
+              Watchlist
             </button>
         
         </center>    
@@ -84,10 +82,8 @@ const Index = (props) => {
           </p>
        </div>
       
-        {valid && showToast(movie.title)}
-        <ToastContainer limit={1} autoClose={2000}/>
        <button className="quickView__close" onClick={popUp}>
-           <CancelOutlinedIcon fontSize='large'/>
+        close
        </button>
     </div>
 </div>

@@ -26,7 +26,7 @@ export default {
         .then((res) => res.json())
     },
     getTrending(){
-        return fetch(`${apiUrl}${endpoints.trending}?api_key=${ApiKey}`)
+        return fetch(`${apiUrl}${endpoints.trending}?api_key=${ApiKey}&language=fr`)
         .then((res) => res.json())
     },  
     getPopular(){
