@@ -1,5 +1,18 @@
-.my-list {
-    &__grid__container {
-        display: grid;
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    &__item {
+        width: 15%;
+        margin: 20px;
     }
+        &__img {
+            img {
+                width: 150px;
+                height: auto;
+            }
+        }
+
+        
+    
 }
