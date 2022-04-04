@@ -1,20 +1,15 @@
-.header {
+.login__header {
     &__main {
-        z-index: 99;
+        z-index: 2;
         position: relative;
-        height: 70px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-right: 3.5%;
-        padding-left: 2.5%;
-        background-color: black;
+        padding: 5px;
     }
     &__logo {
         img {
-            margin-top: 10px;
-            height: 10%;
-            width: 10%;
+            width: 200px;
         }
     }
     &__nav {
@@ -25,27 +20,54 @@
                 list-style: none;
             }
             &__item {
+                margin: 0px 20px;
                 Button {
-                width: fit-content;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 35px;
-                width: 115px;
-                margin-left: auto;
-                font-size: 105%;
+                    width: 100%;
+                    font-size: 100%;
+                    padding: 10px 20px;
                 }
             }
             &__link {
                 font-weight: bold;
-                font-size: 20px;
+                font-size: 15px;
                 &:hover {
-                    color: grey;
+                    color: lightgray;
                 }
             }
         }
-        // .nav__list {}
-        // .nav__item {}
-        // .nav__link {}
+    }
+}
+
+.header {
+    &__main {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+    }
+    &__logo {
+        img {
+            width: 110px;
+        }
+    }
+    &__nav {
+        .nav {
+            &__list {
+                display: flex;
+                align-items: center;
+                list-style: none;
+            }
+            &__item {
+                margin: 0px 20px;
+            }
+            &__link {
+                font-weight: bold;
+                font-size: 15px;
+                &:hover {
+                    color: lightgray;
+                }
+            }
+        }
     }
 }

@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { ToastContainer,toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
 import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
 import AddIcon from '@mui/icons-material/Add';
 
@@ -10,14 +8,6 @@ const Index = (props) => {
   const router = useRouter();
  // const [movie, setMovie] = useState();
   const [valid, setValid] = useState(false);
-
-
-  const showToast = (title) => {
-    toast.success(title + " a été ajoué au Watchlist !", {
-        position: toast.POSITION.TOP_CENTER,autoClose: 2000
-      });
-  
-  };
 
   const dateParser = (date) =>{
     let newDate = new Date(date).toLocaleDateString('fr-FR', {
