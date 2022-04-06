@@ -4,15 +4,18 @@ import movieService from '../services/movie.service'
 import Modal from './Modal';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import { useRouter } from 'next/router';
 
-function Banner() {
+function Banner(props) {
   
   const [movie, setMovie] = useState([]);
   const [infoModal, setInfoModal] = useState(false);
+  const router = useRouter();
 
   const handleClickInfoModal = () => {
      setInfoModal(!infoModal);
    }  
+
   useEffect( ()=>{
     movieService.getTrending()
     .then((data) => {
@@ -58,12 +61,11 @@ function Banner() {
             {truncateText(movie?.overview, 100)}
           </p>
           <div className="banner__buttons">
-            <button  className="banner__button__play">
+            <button  className="banner__button__play" onClick={() => {router.push(`/browse/${movie.id}`)}}>
               <PlayArrowIcon/>Lecture
             </button>
-            <button className="banner__button__info" onClick={handleClickInfoModal}>
-              
-              <InfoOutlinedIcon/>Plus d'infos ? 
+            <button className="banner__button__info" onClick={handleClickInfoModal}> 
+              <InfoOutlinedIcon/>Plus d'infos
               </button>
           </div>
 
