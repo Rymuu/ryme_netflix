@@ -2,6 +2,8 @@ import React from 'react'
 import { useState,useEffect } from 'react';
 import movieService from '../services/movie.service'
 import Modal from './Modal';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
 function Banner() {
   
@@ -56,12 +58,13 @@ function Banner() {
             {truncateText(movie?.overview, 100)}
           </p>
           <div className="banner__buttons">
-            <button  className="banner__button ">
-              Lecture
+            <button  className="banner__button__play">
+              <PlayArrowIcon/>Lecture
             </button>
-            <button className="banner__button" onClick={handleClickInfoModal}>
-              <AiFillInfoCircle/> Plus d'infos
-            </button>
+            <button className="banner__button__info" onClick={handleClickInfoModal}>
+              
+              <InfoOutlinedIcon/>Plus d'infos ? 
+              </button>
           </div>
 
         </div>
