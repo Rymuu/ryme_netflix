@@ -11,13 +11,13 @@ const Login = () => {
     <div className="home__page">
         <p className="p_h1">Films, séries TV et bien<br></br>plus en illimité.</p>
         <p className="p_h2">Où que vous soyez. Annulez à tout moment.</p>
-      <form className="form__home">
+      <form className="form">
           <Input
           label="Prêt à regarder Netflix ? Saisissez votre adresse e-mail pour vous abonner ou réactiver votre abonnement."
           name="username"
           id="username"
           type="email"
-          classes="form__homepage__input"
+          classes="form__input"
           required={true}
           placeholder="Adresse e-mail"
           />
