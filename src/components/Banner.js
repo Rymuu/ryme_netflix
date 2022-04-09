@@ -49,19 +49,17 @@ function Banner(props) {
   console.log(infoModal)
 
   return (
-    <header className='banner' style={bannerStyle} > 
-       
+    <header className='banner' style={bannerStyle} >   
         <div className="banner__content">
-
           <h1 className="banner__title">
             {movie?.title || movie?.name || movie?.original_title}
           </h1>
          
           <p className="banner__description">
-            {truncateText(movie?.overview, 100)}
+            {truncateText(movie?.overview, 150)}
           </p>
           <div className="banner__buttons">
-            <button  className="banner__button__play" onClick={() => {router.push(`/browse/${movie.id}`)}}>
+            <button className="banner__button__play" onClick={() => {router.push(`/browse/${movie.id}`)}}>
               <PlayArrowIcon/>Lecture
             </button>
             <button className="banner__button__info" onClick={handleClickInfoModal}> 

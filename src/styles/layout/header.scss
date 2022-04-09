@@ -7,11 +7,13 @@
         align-items: center;
         padding: 5px;
     }
+
     &__logo {
         img {
             width: 200px;
         }
     }
+
     &__nav {
         .nav {
             &__list {
@@ -19,17 +21,21 @@
                 align-items: center;
                 list-style: none;
             }
+
             &__item {
                 margin: 0px 20px;
+
                 Button {
                     width: 100%;
                     font-size: 100%;
                     padding: 10px 20px;
                 }
             }
+
             &__link {
                 font-weight: bold;
                 font-size: 15px;
+
                 &:hover {
                     color: lightgray;
                 }
@@ -40,32 +46,103 @@
 
 .header {
     &__main {
-        position: relative;
+        z-index: 9;
+        top: 0%;
+        position: sticky;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 5px;
+        background-color: black;
+        width: 100%;
     }
+
     &__logo {
         img {
             width: 110px;
         }
     }
+
     &__nav {
+        &__right {
+            margin-right: 3%;
+
+            .nav {
+                &__list {
+                    display: flex;
+                    align-items: center;
+                    list-style: none;
+                    margin: 0%;
+                }
+
+                &__item {
+                    margin-left: 20px;
+
+                    &__profil {
+                        img {
+                            width: 45px;
+                            border-radius: 2px;
+                            margin-right: 100%;
+                        }
+                    }
+                }
+
+                &__link {
+                    &__white {
+                        font-size: 14px;
+                        color: white;
+                        font-weight: bold;
+
+                        &:hover {
+                            transition: color 0.5s;
+                            color: rgb(179, 179, 179);
+                        }
+                    }
+
+                    font-size: 14px;
+                    color: lightgray;
+
+                    &:hover {
+                        transition: color 0.5s;
+                        color: rgb(179, 179, 179);
+                    }
+                }
+
+
+            }
+        }
+
         .nav {
+
             &__list {
                 display: flex;
                 align-items: center;
                 list-style: none;
+                margin: 0%;
             }
+
             &__item {
-                margin: 0px 20px;
+                margin-left: 20px;
             }
+
             &__link {
-                font-weight: bold;
-                font-size: 15px;
+                &__white {
+                    font-size: 14px;
+                    color: white;
+                    font-weight: bold;
+
+                    &:hover {
+                        transition: color 0.5s;
+                        color: rgb(179, 179, 179);
+                    }
+                }
+
+                font-size: 14px;
+                color: lightgray;
+
                 &:hover {
-                    color: lightgray;
+                    transition: color 0.5s;
+                    color: rgb(179, 179, 179);
                 }
             }
         }

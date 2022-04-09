@@ -28,13 +28,19 @@ const Index = () => {
             })
             .catch(err => console.log(err))
     }, []);
+    const trailerStyle = {
+        backgroundSize: "cover",
+        backgroundPosition: "center center",
 
+    }
     return (
-        <div className="trailer_page">
+        <div className="trailer_page" style={trailerStyle}>
             <CategoryTitle title={movie && movie.original_title} />
-            <iframe id="ytplayer" type="text/html" width="640" height="360"
-                src={`${trailerUrl}${video}`}
-                frameborder="0" />
+            <center>
+                <iframe id="ytplayer" type="text/html" width="840" height="560"
+                    src={`${trailerUrl}${video}?mute=1&autoplay=1&showinfo=0`}
+                    frameborder="0" />
+            </center>
 
         </div>
     );

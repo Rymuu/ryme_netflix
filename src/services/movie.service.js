@@ -6,11 +6,12 @@ const endpoints = {
     popular: "/movie/popular",
     top_rated: "/movie/top_rated",
     upcoming: "/movie/upcoming",
+    search: "/search/movie",
 };
 
 export default {
     getMovies(){
-        return fetch(`${apiUrl}/discover/movie?api_key=${ApiKey}&language=fr&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate`)
+        return fetch(`${apiUrl}/discover/movie?api_key=${ApiKey}&language=fr&sort_by=popularity.desc&include_adult=false&include_video=false&page=3&with_watch_monetization_types=flatrate`)
         .then((res) => res.json())
     },
     getMovie(id){
@@ -39,6 +40,10 @@ export default {
     },
     getUpcoming(){
         return fetch(`${apiUrl}${endpoints.upcoming}?api_key=${ApiKey}&language=fr&page=1`)
+        .then((res) => res.json())
+    },
+    getSearchResult(searchQuery){
+        return fetch(`${apiUrl}${endpoints.search}?api_key=${ApiKey}&language=fr&query=${searchQuery}&page=1&include_adult=false`)
         .then((res) => res.json())
     }
 

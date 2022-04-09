@@ -9,6 +9,7 @@
     transition: transform 300ms ease 100ms;
     &:hover {
         transform: scale(1.2) !important;
+        transition: transform .3s; 
       }
     &__img {
         width: 97%;

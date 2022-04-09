@@ -26,6 +26,10 @@
 
         }
 
+        .banner__description {
+            width: 70%;
+        }
+
         .banner__title {
             font-size: 1.5rem;
 
@@ -39,10 +43,8 @@
             }
 
             .banner__button {
-                &__play {
-                    color: rgb(0, 0, 0);
+                &__play {  
                     border: none;
-                    background-color: rgb(255, 255, 255, 0.5);
                     display: flex;
                     align-items: center;
                     color: inherit;
@@ -55,6 +57,8 @@
                     @media screen and(min-width:768px) {
                         font-size: 1.4rem;
                         padding: 0.8rem 1.5rem;
+                        color: rgb(0, 0, 0);
+                        background-color: rgba(255, 255, 255);
 
                     }
 

@@ -5,8 +5,8 @@ import movieService from "../../services/movie.service";
 
 const Index = () => {
 
-const [popular, setPopular] = useState([]);
-  const [filtered, setFiltered] = useState([]); 
+  const [popular, setPopular] = useState([]);
+  const [filtered, setFiltered] = useState([]);
   const [activeGenre, setActiveGenre] = useState(0);
 
   useEffect(() => {
@@ -17,18 +17,17 @@ const [popular, setPopular] = useState([]);
         setFiltered(data.results)
       })
       .catch(err => console.log(err))
-      },[]);  
+  }, []);
 
-return (
+  return (
     <div className="page__filter">
-        <h1>Movies</h1>
       <Filter popular={popular} setFiltered={setFiltered} activeGenre={activeGenre} setActiveGenre={setActiveGenre} />
-    <div className="grid">
+      <div className="grid">
         {filtered.map((movie) => {
           return <MoviesCard key={movie.id} movie={movie} />;
         })}
-    </div>
-    </div>
+      </div>
+    </div >
   );
 };
 export default Index;

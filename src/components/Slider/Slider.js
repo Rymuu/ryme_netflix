@@ -7,19 +7,6 @@ import CategoryTitle from "../../components/CategoryTitle";
 
 
 const Index = (props) => {
-  const [video, setVideo] = useState();
-  const [loading, setLoading] = useState(false)
-  const [movies, setMovies] = useState();
-  const ytbURL = "https://www.youtube.com/embed";
-
-    useEffect(() => {
-      movieService.getMovies()
-        .then((data) => {
-          setMovies(data.results);
-          setLoading(true)
-        })
-        .catch(err => console.log(err))
-        },[loading]);
 
         const responsive = {
           desktop: {
@@ -43,8 +30,8 @@ const Index = (props) => {
   return (
     <>
     <div className="movie__slider">
-      <CategoryTitle title = "Tendances"/>
-    {movies &&
+      <CategoryTitle title = {props.title}/>
+    {props.movies &&
       <Carousel
       responsive={responsive}
       autoPlay={false}
@@ -52,7 +39,7 @@ const Index = (props) => {
       infinite={true}
       className="container"
       >
-        {movies.map((movie) => {return (<MoviesCardSlider movie={movie} key={movie.id}/>)
+        {props.movies.map((movie) => {return (<MoviesCardSlider movie={movie} key={movie.id}/>)
           }) }
       </Carousel>}
       

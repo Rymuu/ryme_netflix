@@ -1,7 +1,14 @@
 .category__title {
     text-align: left;
     font-size: 70%;
-    font-family : $titleFont;
-    margin-left: 3.8%;
-    
+    font-family: $titleFont;
+    margin-left: 3.8px;
+}
+
+.page {
+    &__mylist {
+        .category__title {
+            margin-left: 5%;
+        }
+    }
 }
