@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Input from "../components/Input"
 import Button from "../components/Button";
 
+
 const Login = () => {
 
   return (
@@ -11,9 +12,10 @@ const Login = () => {
     <div className="home__page">
         <p className="p_h1">Films, séries TV et bien<br></br>plus en illimité.</p>
         <p className="p_h2">Où que vous soyez. Annulez à tout moment.</p>
+        <p font-size="larger">Prêt à regarder Netflix ? Saisissez votre adresse e-mail pour vous abonner ou réactiver<br></br>votre abonnement.</p>
       <form className="form">
+        <div className="form__content"></div>
           <Input
-          label="Prêt à regarder Netflix ? Saisissez votre adresse e-mail pour vous abonner ou réactiver votre abonnement."
           name="username"
           id="username"
           type="email"
@@ -22,6 +24,7 @@ const Login = () => {
           placeholder="Adresse e-mail"
           />
         <Button title="Commencer >" classes="btn btn__color-red" type="submit"/>
+      <div/>
       </form>
     </div>
     </div>

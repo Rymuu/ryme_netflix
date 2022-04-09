@@ -1,24 +1,52 @@
 .btn {
     border: none;
-    padding: 15px 20px;
+    
     background-color: none;
     transition: 0.3s all;
-    border: 1px solid black;
     font-size: 200%;
+    cursor: pointer;
+
     &__color {
         &-red {
+            padding: 15px 20px;
             background: #dd0e15;
             color: white;
+
             &:hover {
                 background: red;
                 transition: 0.3s all;
             }
+
             &__shape {
                 &-rounded {
                     border-radius: 4px;
                     background: #dd0e15;
-                    color:white;
+                    color: white;
+                    &:hover {
+                        background: red;
+                        transition: 0.3s all;
+                    }
                 }
+            }
+        }
+
+        &-red-form {
+            border: 0px;
+            height: 60px;
+            background: rgb(255, 0, 0);
+            border-radius: 3px;
+            color: white;
+            font-size: larger;
+            padding: 5px;
+            width: 100%;
+            font-weight: bold;
+            margin-top: 10px;
+
+            &:hover {
+                background: rgb(255, 0, 0);
+                border: 1px solid rgb(255, 255, 255);
+                color: rgb(255, 255, 255);
+                transition: 0.3s all;
             }
         }
     }

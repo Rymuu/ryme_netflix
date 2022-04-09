@@ -18,7 +18,14 @@ const Filter = ({ popular, setFiltered, activeGenre, setActiveGenre }) => {
   return (
     <div className="dropdown">
       <CategoryTitle title="Films" />
-      <button className="dropbtn">Genres<ArrowDropDownOutlinedIcon className="btn__icon"/></button>
+      <button className="dropbtn">
+        <div className="dropbtn__div">
+          Genres
+        </div>
+        <div className="dropbtn__div">
+        <ArrowDropDownOutlinedIcon className="btn__icon" />
+        </div>
+      </button>
       <div className="dropdown-content">
         <a onClick={() => setActiveGenre(0)}
           className={activeGenre === 0 ? "active" : ""}>

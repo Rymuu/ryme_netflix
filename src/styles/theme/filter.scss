@@ -4,9 +4,11 @@
     border-radius: 4px;
     color: rgb(255, 255, 255);
     font-size: 16px;
-    padding-left: 12px;
-    padding-bottom: 7px;
+    display: flex;
     cursor: pointer;
+    &__div {
+        margin: auto;
+    }
 }
 
 .dropdown {

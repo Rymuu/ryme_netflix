@@ -11,7 +11,7 @@ const Header = () => {
   const router = useRouter();
   return (
     <>
-      {router.asPath === "/" ?
+      {router.asPath === "/" || router.asPath === "/login" || router.asPath === "/register" ?
 
         (
           <header className="login__header__main">
@@ -23,7 +23,16 @@ const Header = () => {
             <nav className="login__header__nav">
               <ul className="nav__list">
                 <li className="nav__item">
-                  <Button title="S'identifier" classes="btn btn__color-red__shape-rounded" type="submit" />
+                  {router.asPath === "/" || router.asPath === "/register" ?
+                    (<Button title="S'identifier"
+                      function={() => router.push("/login")}
+                      classes="btn btn__color-red__shape-rounded"
+                      type="submit" />)
+                    :
+                    (
+                      null
+                    )
+                  }
                 </li>
               </ul>
             </nav>
@@ -43,11 +52,19 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className="nav__item">
-                  <Link color="blue" href="/browse">
+                  <Link href="/browse">
                     {router.asPath === "/browse" ?
                       (<a className="nav__link__white">Accueil</a>)
                       :
                       (<a className="nav__link">Accueil</a>)}
+                  </Link>
+                </li>
+                <li className="nav__item">
+                  <Link href="/movies">
+                    {router.asPath === "/movies" ?
+                      (<a className="nav__link__white">Films</a>)
+                      :
+                      (<a className="nav__link">Films</a>)}
                   </Link>
                 </li>
                 <li className="nav__item">
@@ -79,7 +96,7 @@ const Header = () => {
                 <li className="nav__item">
                   <Link href="/account">
                     <a className="nav__item__profil">
-                    <img src={Icon.src} alt="profil__icon"/>
+                      <img src={Icon.src} alt="profil__icon" />
                     </a>
                   </Link>
                 </li>

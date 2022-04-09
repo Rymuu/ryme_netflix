@@ -1,14 +1,138 @@
-.form {
-    &__input { 
-        width: 65%;
-        height: 100%;
-        display: flex;
+.home {
+    &__page {
+        margin: auto;
+        width: 100%;
+        z-index: 2;
         position: absolute;
-        color: lightgrey;
-        font-size: 100%;
-        padding: 10px;
-        border-radius: 3px;
-    
+        text-align: center;
+
+        .p_h1 {
+            font-size: 385%;
+            font-weight: bold;
+            margin: 15px;
+            margin-top: 100px;
+        }
+
+        ;
+
+        .p_h2 {
+            font-size: 165%;
+            margin: 10px;
+        }
+
+        ;
+
+        .form {
+            top: 115%;
+            text-align: center;
+            height: 25%;
+            display: flex;
+            width: 50%;
+
+            &__input {
+                width: 65%;
+                height: 100%;
+                position: absolute;
+                background-color: rgb(255, 255, 255);
+                font-size: 100%;
+                padding: 10px;
+                border-radius: 3px;
+            }
+
+            label {
+                position: absolute;
+                font-size: 125%;
+            }
+
+            ;
+
+            Button {
+                position: absolute;
+                font-size: larger;
+                right: 0%;
+                height: 100%;
+                width: 35%;
+                border-radius: 3px;
+            }
+
+            ;
+        }
+
+        ;
+    }
+
+    ;
+}
+
+
+.form {
+    z-index: 9;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+    position: absolute;
+
+    &__group {
+        margin-bottom: 20px;
+
+        input {
+            height: 50px;
+            padding: 10px 15px;
+            border-radius: 3px;
+            transition: 0.3s all;
+            width: 100%;
+            background-color: rgb(45, 45, 45);
+            border-width: 0px;
+
+
+
+            &:focus {
+                transition: 0.3s all;
+                border: 2px solid black;
+                outline: none;
+            }
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+    }
+
+    &__opacity {
+        position: absolute;
+        border-radius: 7px;
+        background-color: rgba(0, 0, 0, 0.7);
+        height: 70%;
+        width: 27%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__content {
+        color: grey;
+
+        &__white {
+            color: white;
+        }
     }
 }
 
+.register__page {
+    input {
+        background-color: white;
+        border-color: rgb(176, 176, 176);
+        border-width: 2px;
+        border-style: solid;
+    }
+    h1 {
+        color: black;
+        font-family: $titleFont;
+        margin-top: 40%;
+    }
+}

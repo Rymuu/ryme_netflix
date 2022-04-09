@@ -34,7 +34,7 @@ const Index = () => {
 
     }
     return (
-        <div className="trailer_page" style={trailerStyle}>
+        <div className="page__trailer" style={trailerStyle}>
             <CategoryTitle title={movie && movie.original_title} />
             <center>
                 <iframe id="ytplayer" type="text/html" width="840" height="560"
