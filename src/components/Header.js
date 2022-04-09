@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import SearchIcon from '@mui/icons-material/Search';
 import Icon from "../public/icones/aggretsuko.png";
+import ArrowDropDownOutlinedIcon from '@mui/icons-material/ArrowDropDownOutlined';
 
 const Header = () => {
   const router = useRouter();
@@ -99,6 +100,11 @@ const Header = () => {
                       <img src={Icon.src} alt="profil__icon" />
                     </a>
                   </Link>
+                </li>
+                <li className="nav__item">
+                <div className="dropbtn__div"></div>
+                <ArrowDropDownOutlinedIcon className="btn__icon"/>
+                <div className="dropbtn__div"></div>
                 </li>
               </ul>
             </nav>

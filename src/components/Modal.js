@@ -4,8 +4,12 @@ import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import AddCircleRoundedIcon from '@mui/icons-material/AddCircleRounded';
 import RemoveCircleOutlineRoundedIcon from '@mui/icons-material/RemoveCircleOutlineRounded';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Index = (props) => {
+  const notifyAdd = () => toast(`${movie.original_title} a bien été ajouté dans ta watchlist !`);
+  const notifyDelete = () => toast(`${movie.original_title} a bien été retiré de ta watchlist !`);
   const { bannerStyle, movie, popUp, popUpStatut } = props
   const router = useRouter();
   // const [movie, setMovie] = useState();
@@ -26,13 +30,14 @@ const Index = (props) => {
   }
 
   const deleteMovie = (movie) => {
+    notifyDelete();
     const filteredList = watchlist.filter((item) => item.id !== movie.id);
     localStorage.setItem("mylist", JSON.stringify(filteredList));
     setWatchlist(filteredList);
   };
   const addTowatchlist = (element) => {
     //On créé un nouvel object avec une nouvelle propriété quantity
-    setValid(true);
+    notifyAdd();
     let movieToInsert = {
       id: element.id,
       title: element.title,
@@ -76,6 +81,18 @@ const Index = (props) => {
   return (
     <div className={`quickView ${popUpStatut && "open"}`} >
       <div className="quickView__banner" style={bannerStyle} >
+
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
 
         <div className="modal__buttons">
           <button className="banner__button" onClick={() => { router.push(`/browse/${movie.id}`) }}>
