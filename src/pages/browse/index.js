@@ -3,6 +3,7 @@ import movieService from "../../services/movie.service";
 import "react-multi-carousel/lib/styles.css";
 import Banner from "../../components/Banner";
 import Slider from "../../components/Slider/Slider";
+import withAuth from "../../HOC/withAuth";
 
 
 const Index = () => {
@@ -69,4 +70,4 @@ const Index = () => {
   )
 };
 
-export default Index;
+export default withAuth(Index);
