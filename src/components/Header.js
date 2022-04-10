@@ -101,7 +101,7 @@ const Header = () => {
                     </a>
                   </Link>
                 </li>
-                <li className="nav__item">
+                <li className="dropbtn">
                 <div className="dropbtn__div"></div>
                 <ArrowDropDownOutlinedIcon className="btn__icon"/>
                 <div className="dropbtn__div"></div>
