@@ -4,6 +4,8 @@ import Button from "../../components/Button";
 import Link from "next/link";
 import axios from "axios";
 import { useRouter } from "next/router";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
     const router = useRouter();
@@ -21,6 +23,7 @@ const Register = () => {
         console.log("error")
       } else {
         console.log(response)
+        localStorage.setItem("user", JSON.stringify(response.data.user))
         localStorage.setItem('token', response.data.accessToken);
         router.push("/browse")
       }
@@ -30,6 +33,7 @@ const Register = () => {
     .catch(error => {
       // Handle error.
       console.log('An error occurred:', error.response);
+      toast.error(`${error.response.data}`);
     });
         console.log(e);
         e.preventDefault();
@@ -40,8 +44,18 @@ const Register = () => {
 
     return (
         <div>
+          <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
             <div className="background"></div>
-
             <div className="register__page">
                 <div className="line"></div>
                 <form className="form" onSubmit={(e)=> submitRegister(e)}>

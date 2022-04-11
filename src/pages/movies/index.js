@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import MoviesCard from "../../components/Slider/MovieCard";
 import Filter from "../../components/Filter";
 import movieService from "../../services/movie.service";
+import withAuth from "../../HOC/withAuth";
 
 const Index = () => {
 
@@ -30,4 +31,4 @@ const Index = () => {
     </div >
   );
 };
-export default Index;
+export default withAuth(Index);

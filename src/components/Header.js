@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import Link from "next/link";
 import LogoNetflix from "../public/netflix.png";
 import Button from "./Button";
@@ -6,10 +5,17 @@ import { useRouter } from "next/router";
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import SearchIcon from '@mui/icons-material/Search';
 import Icon from "../public/icones/aggretsuko.png";
-import ArrowDropDownOutlinedIcon from '@mui/icons-material/ArrowDropDownOutlined';
+import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 
 const Header = () => {
   const router = useRouter();
+
+  const logoff = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    router.push("/login");
+  }
+
   return (
     <>
       {router.asPath === "/" || router.asPath === "/login" || router.asPath === "/register" ?
@@ -86,32 +92,31 @@ const Header = () => {
                 </li>
               </ul>
             </nav>
-            <nav className="header__nav__right" margin-right="15%">
+            <nav className="header__nav__right">
               <ul className="nav__list">
                 <li className="nav__item">
-                  <a className="nav__item__icon"><SearchIcon /></a>
+                  <SearchIcon className="icon" onClick={() => router.push("/search")} />
                 </li>
                 <li className="nav__item">
                   <a className="nav__item__icon"><NotificationsIcon /></a>
                 </li>
                 <li className="nav__item">
-                  <Link href="/account">
+                  <Link href="/profil">
                     <a className="nav__item__profil">
                       <img src={Icon.src} alt="profil__icon" />
                     </a>
                   </Link>
                 </li>
-                <li className="dropbtn">
-                <div className="dropbtn__div"></div>
-                <ArrowDropDownOutlinedIcon className="btn__icon"/>
-                <div className="dropbtn__div"></div>
+                <li className="nav__item">
+                  <a className="nav__link__white" onClick={() => logoff()}>
+                    <LogoutOutlinedIcon />
+                  </a>
                 </li>
               </ul>
             </nav>
           </header>
         )
       }
-
 
     </>
 

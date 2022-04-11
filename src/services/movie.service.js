@@ -45,7 +45,10 @@ export default {
     getSearchResult(searchQuery){
         return fetch(`${apiUrl}${endpoints.search}?api_key=${ApiKey}&language=fr&query=${searchQuery}&page=1&include_adult=false`)
         .then((res) => res.json())
+    },
+    getSimilarMovies(id){
+        return fetch(`${apiUrl}/movie/${id}/similar?api_key=${ApiKey}&language=fr&page=1`)
+        .then((res) => res.json())
     }
-
 
 }

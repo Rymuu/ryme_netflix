@@ -23,7 +23,7 @@ const Filter = ({ popular, setFiltered, activeGenre, setActiveGenre }) => {
           Genres
         </div>
         <div className="dropbtn__div">
-        <ArrowDropDownOutlinedIcon className="btn__icon" />
+          <ArrowDropDownOutlinedIcon className="btn__icon" />
         </div>
       </button>
       <div className="dropdown-content">

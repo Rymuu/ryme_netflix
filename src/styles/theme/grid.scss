@@ -1,5 +1,5 @@
 .grid {
-    left : 5%;
+    left: 5%;
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -8,14 +8,88 @@
     column-gap: 5px;
 
 
-        &__img {
-            img {
-                width: 220px;
-                height: auto;
-                border-radius: 3px;
-            }
-        }
+    &__img {
+        height: 123px;
 
-        
-    
+        img {
+            width: 220px;
+            height: auto;
+            border-radius: 3px;
+        }
+    }
+
+    &__card {
+        border-radius: 3px;
+        transition: transform .3s;
+    }
+
+    &__content {
+        display: none;
+        width: 220px;
+        height: auto;
+        background-color: rgb(26, 26, 26);
+        position: absolute;
+        height: 110px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+
+        p {
+            font-size: 13px;
+        }
+    }
+
+    &__item:hover &__card {
+        z-index: 9999;
+        display: block;
+        transform: scale(1.3);
+        transition: transform .3s;
+    }
+
+    &__item:hover &__content {
+        display: block;
+    }
+
+
+
+}
+
+.hoverInfo {
+    &__Icon {
+        margin-left: 5px;
+        margin-top: 5px;
+
+        &__Right {
+            padding-left: 0px;
+            margin-left: 55px;
+        }
+    }
+
+    &__Green {
+        margin-left: 10px;
+        font-size: 70px;
+        font-weight: bold;
+        color: green;
+    }
+}
+
+.hoverInfo__Icon:hover {
+    color: grey;
+}
+
+.hoverInfo__Icon__Right:hover {
+    color: grey;
+}
+
+.similar {
+    &__movie {
+        &__img {
+            height: 123px;
+
+        img {
+            width: 220px;
+            height: auto;
+            border-radius: 3px;
+        }
+        }
+    }
 }

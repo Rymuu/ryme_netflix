@@ -1,0 +1,23 @@
+.profil {
+    &__page {
+        position: relative;
+        display: inline-block;
+
+        margin-top: 5%;
+    }
+
+    &__image {
+    }
+
+    &__info {
+        position: absolute;
+        display: block;
+
+
+    }
+}
+
+.image {
+    width: 70%;
+    border-radius: 10px;
+}

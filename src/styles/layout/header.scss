@@ -78,13 +78,14 @@
                 }
 
                 &__item {
-                    margin-left: 20px;
+                    margin-right: 20px;
 
                     &__profil {
                         img {
-                            width: 45px;
+                            width: 40px;
                             border-radius: 2px;
                             margin-right: 100%;
+                            margin: auto;
                         }
                     }
                 }
@@ -98,6 +99,7 @@
                         &:hover {
                             transition: color 0.5s;
                             color: rgb(179, 179, 179);
+                            cursor: pointer;
                         }
                     }
 
@@ -107,6 +109,7 @@
                     &:hover {
                         transition: color 0.5s;
                         color: rgb(179, 179, 179);
+                        cursor: pointer;
                     }
                 }
 
@@ -136,6 +139,7 @@
                     &:hover {
                         transition: color 0.5s;
                         color: rgb(179, 179, 179);
+                        cursor: pointer;
                     }
                 }
 
@@ -145,8 +149,15 @@
                 &:hover {
                     transition: color 0.5s;
                     color: rgb(179, 179, 179);
+                    cursor: pointer;
                 }
             }
         }
     }
+}
+
+.icon:hover {
+    transition: color 0.5s;
+    color: gray;
+    cursor: pointer;
 }

@@ -4,11 +4,14 @@ import Button from "../../components/Button";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Login = () => {
 
   const router = useRouter();
-  const [user, setUser] = useState();
+  const [user, setUser] = useState(); 
 
   const submitLogin = (e) => {
     axios
@@ -19,15 +22,17 @@ const Login = () => {
     .then(response => {
       // Handle success.
       console.log(e);
-      console.log('User profile', response.user);
+      console.log('User profile', response.data);
       console.log('User token', response.data.accessToken);
       localStorage.setItem("token", response.data.accessToken);
+      localStorage.setItem("user", JSON.stringify(response.data.user))
       router.push('/browse')
     
     })
     .catch(error => {
       // Handle error.
       console.log('An error occurred:', error.response);
+      toast.error(`${error.response.data}`);
     });
     e.preventDefault(); 
   
@@ -35,6 +40,18 @@ const Login = () => {
 
   return (
     <div>
+      <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
+
     <div className="background_image"></div>
     <div className="opacity"></div>
     <div className="form__opacity"></div>

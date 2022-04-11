@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import Button from "../../components/Button";
 import CategoryTitle from "../../components/CategoryTitle";
+import withAuth from "../../HOC/withAuth";
+import Movie from "../../components/Slider/MovieCard";
 
 const Index = () => {
   const [myList, setMyList] = useState(typeof window !== "undefined" ? JSON.parse(localStorage.getItem("mylist")) : []);
@@ -21,13 +23,9 @@ const Index = () => {
       <CategoryTitle title="Ma liste" />
       {myList ? (
         <div className="grid">
-          {myList.map((listItem) => (
-            <div className="grid__item">
-              <div className="grid__img">
-                <img src={"https://image.tmdb.org/t/p/w500" + listItem.backdrop_path} alt={listItem.path} />
-              </div>
-            </div>
-          ))}
+          {myList.map((myList) => {
+            return <Movie key={myList.id} movie={myList} />;
+          })}
         </div>
       ) : (
         <center>
@@ -38,4 +36,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default withAuth(Index);

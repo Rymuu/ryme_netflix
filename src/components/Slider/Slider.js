@@ -1,9 +1,7 @@
-import { useEffect, useState } from "react";
-import MoviesCardSlider from "./MoviesCardSlider";
-import movieService from "../../services/movie.service";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import CategoryTitle from "../../components/CategoryTitle";
+import Movie from "./MovieCard";
 
 
 const Index = (props) => {
@@ -39,7 +37,7 @@ const Index = (props) => {
       infinite={true}
       className="container"
       >
-        {props.movies.map((movie) => {return (<MoviesCardSlider movie={movie} key={movie.id}/>)
+        {props.movies.map((movie) => {return (<Movie movie={movie} key={movie.id}/>)
           }) }
       </Carousel>}
       

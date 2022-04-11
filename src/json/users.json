@@ -5,6 +5,24 @@
       "password": "$2a$10$tlGS6ELOKYzXaw6G5F0Ik.u1ExIlue7.bz0rjbdeg8fmo23lftM9e",
       "username": "rymu",
       "id": 1
+    },
+    {
+      "email": "tiss@tiss.tiss",
+      "password": "$2a$10$6ktd57KrPK9PSxMhR1VoHu5n5wvPDmXdkgZpAr8J.pxRPuaB9CI7S",
+      "username": "tiss",
+      "id": 2
+    },
+    {
+      "email": "Yaya@yaya.yaya",
+      "password": "$2a$10$J4hcX4veqoaGuDASyJA5TOi.pzQPNhHm.iJMwJ3qgvCTAACXqg9YK",
+      "username": "Yaya",
+      "id": 3
+    },
+    {
+      "email": "kirby@kirby.com",
+      "password": "$2a$10$lsiTA.QjBxgc6QEnN2Gr7.LXEy4d.XQJ/QKam80XWCVcUyS3Cwmrq",
+      "username": "kirby",
+      "id": 4
     }
   ]
 }

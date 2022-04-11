@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import movieService from "../../../services/movie.service";
 import CategoryTitle from "../../../components/CategoryTitle";
+import withAuth from "../../../HOC/withAuth";
 
 const Index = () => {
     const router = useRouter();
@@ -46,4 +47,4 @@ const Index = () => {
     );
 };
 
-export default Index;
+export default withAuth(Index);
