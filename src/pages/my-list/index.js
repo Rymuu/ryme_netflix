@@ -8,12 +8,6 @@ import Movie from "../../components/Slider/MovieCard";
 const Index = () => {
   const [myList, setMyList] = useState(typeof window !== "undefined" ? JSON.parse(localStorage.getItem("mylist")) : []);
 
-  const deleteItem = (movie) => {
-    const filteredList = myList.filter((movie) => movie.id !== movie.id);
-    localStorage.setItem("mylist", JSON.stringify(filteredList));
-    setMyList(filteredList);
-  }
-
   useEffect(() => {
     setMyList(JSON.parse(localStorage.getItem("mylist")));
   }, []);
@@ -23,8 +17,8 @@ const Index = () => {
       <CategoryTitle title="Ma liste" />
       {myList ? (
         <div className="grid">
-          {myList.map((myList) => {
-            return <Movie key={myList.id} movie={myList} />;
+          {myList.map((movie) => {
+            return <Movie key={movie.id} movie={movie} />;
           })}
         </div>
       ) : (

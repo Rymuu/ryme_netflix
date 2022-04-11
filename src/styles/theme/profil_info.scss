@@ -1,8 +1,8 @@
 .profil {
     &__page {
         position: relative;
-        display: inline-block;
-
+        display: flex;
+        margin-bottom: 5%;
         margin-top: 5%;
     }
 
@@ -10,9 +10,9 @@
     }
 
     &__info {
+        margin-left: 30%;
         position: absolute;
         display: block;
-
 
     }
 }
@@ -20,4 +20,5 @@
 .image {
     width: 70%;
     border-radius: 10px;
+    margin-left: 120%;
 }
