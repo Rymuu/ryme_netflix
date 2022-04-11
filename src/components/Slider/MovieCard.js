@@ -9,7 +9,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import Modal from "../Modal";
 
 const Movie = ({ movie }) => {
-  const [showToast, setShowToast] = useState(false);
   const router = useRouter();
   const notifyAdd = () => toast.success(`${movie?.title || movie?.name || movie?.original_title} a bien été ajouté dans ta watchlist !`);
   const notifyDelete = () => toast.success(`${movie?.title || movie?.name || movie?.original_title} a bien été retiré de ta watchlist !`);
