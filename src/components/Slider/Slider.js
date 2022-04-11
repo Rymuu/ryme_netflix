@@ -1,7 +1,7 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import CategoryTitle from "../../components/CategoryTitle";
-import Movie from "./MovieCard";
+import Movie from "./SimilarMoviesCard";
 
 
 const Index = (props) => {

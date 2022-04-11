@@ -84,12 +84,13 @@
     &__movie {
         &__img {
             height: 123px;
-
-        img {
-            width: 220px;
-            height: auto;
             border-radius: 3px;
-        }
+
+            img {
+                width: 220px;
+                height: auto;
+
+            }
         }
     }
 }
